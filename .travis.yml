@@ -1,15 +1,14 @@
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - libc6-dev
-
-
 language: node_js
+
+branches:
+  only:
+  - main
 
 node_js:
   - 15
+
+before_script:
+  - sudo npm config set progress false
 
 jobs:
   include:
