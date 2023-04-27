@@ -7,14 +7,14 @@
   "scripts": {
     "build": "tsc",
     "commit": "git-cz",
-    "start": "node ./dist/index.js",
     "lint": "eslint './src/*.ts'",
     "lint:fix": "eslint './src/*.ts' --fix",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "semantic-release": "semantic-release --branches main",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
@@ -26,6 +26,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
+    "husky": "8.0.3",
     "jest": "^29.5.0",
     "semantic-release": "^21.0.1",
     "ts-jest": "^29.1.0",
@@ -46,8 +47,12 @@
     "url": "https://github.com/godrix/brasileirao/issues"
   },
   "keywords": [
-    "brasileirao",
-    "brasileiro"
+    "campeonato",
+    "brasileiro",
+    "brasileirão",
+    "campeonato brasileiro",
+    "campeonato brasileiro api",
+    "tabela campeonato brasileiro"
   ],
   "config": {
     "commitizen": {
