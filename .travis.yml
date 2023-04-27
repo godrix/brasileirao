@@ -7,13 +7,10 @@ branches:
 node_js:
   - 15
 
-before_script:
-  - sudo npm config set progress false
-
 jobs:
   include:
     - stage: release
-      node_js: lts/*
+      node_js: 15
       deploy:
         provider: script
         skip_cleanup: true
