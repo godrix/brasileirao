@@ -12,7 +12,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
