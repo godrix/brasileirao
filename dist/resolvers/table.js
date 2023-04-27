@@ -18,7 +18,6 @@ const table = (liga) => __awaiter(void 0, void 0, void 0, function* () {
         (0, http_1.TableService)('CNN', liga)
     ];
     const result = yield Promise.any(promises);
-    const table = (0, services_1.extractedData)(result.data, result.provider);
-    return table;
+    return (0, services_1.extractedData)(result.data, result.provider);
 });
 exports.table = table;
