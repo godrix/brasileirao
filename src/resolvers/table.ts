@@ -9,7 +9,6 @@ export const table = async (liga:LeagueTable) => {
   ]
   const result = await Promise.any(promises)
 
-  const table = extractedData(result.data, result.provider)
+  return extractedData(result.data, result.provider)
 
-  return table
 }
