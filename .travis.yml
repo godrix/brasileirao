@@ -1,8 +1,15 @@
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - libc6-dev
+
+
 language: node_js
 
 node_js:
   - 15
-  - 16
 
 jobs:
   include:
