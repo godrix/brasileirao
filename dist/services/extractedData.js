@@ -58,7 +58,7 @@ const extractedData = (data, provider) => {
         }
         const matchTableCellNumbers = String(match).match(regexTableCellNumber);
         if (!matchTableCellNumbers) {
-            throw new Error('Não foi possível encontrar os de pontuacao');
+            throw new Error('Não foi possível encontrar os de pontuação');
         }
         const filterNumbersTable = matchTableCellNumbers.map(item => Number(item.replace(/<[^>]*>/g, '')));
         const extractImageAndName = matchImage.filter((item) => item.replace(/^(src=|title=)/g, '') !== "");

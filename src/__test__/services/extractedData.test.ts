@@ -38,7 +38,7 @@ describe('extractData', () => {
   it("Should throw an error if score information is not found", async () => {
     const mockData = readFileSync(mockFilePathCNNError, 'utf8');
 
-    expect(() => extractedData(mockData, 'CNN')).toThrowError('Não foi possível encontrar os de pontuacao');
+    expect(() => extractedData(mockData, 'CNN')).toThrowError('Não foi possível encontrar os de pontuação');
   });
 
   it("Should throw an error if it can't find the images", async () => {
