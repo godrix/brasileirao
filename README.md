@@ -132,8 +132,8 @@ const partidas = match('b')
   - [x] Serie A table
   - [x] Serie B table
   - [ ] Serie C table
-  - [ ] Results of the Series A round
-  - [ ] Results of the Series B round
+  - [x] Results of the Series A round
+  - [x] Results of the Series B round
   - [ ] Games of the day
 
 
