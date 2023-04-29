@@ -54,7 +54,7 @@ yarn add brasileirao
 ## How to use
 
 ```js
-// const {tabela} = require('brasileirao')
+// const {table} = require('brasileirao')
 import {table} from "brasileirao"
 
 // Returns the classification of the Brasileirão A
@@ -81,6 +81,48 @@ const serieA = table('a')
     recentResults: null,
     positionChange: null
   },
+  ...
+*/
+
+```
+
+
+```js
+// const {match} = require('brasileirao')
+import {match} from "brasileirao"
+
+// Returns the current match of the Brasileirão B
+const partidas = match('b')
+
+/**
+ * Get currents match data:
+ {
+  "round_information": {
+    "current": 3,
+    "last": 38
+  },
+  "matches": [
+    {
+      "match_date": "2023-04-28T19:00",
+      "match_time": "19:00",
+      "teams": {
+        "home_team": {
+          "badge": "...criciuma.svg",
+          "name": "Criciúma",
+          "abbreviation": "CRI"
+        },
+        "away_team": {
+          "badge": "...avai-futebol-clube.svg",
+          "name": "Avaí",
+          "abbreviation": "AVA"
+        }
+      },
+      "home_team_score": null,
+      "away_team_score": 0,
+      "stadium": {
+        "name": "Heriberto Hülse"
+      }
+    },
   ...
 */
 

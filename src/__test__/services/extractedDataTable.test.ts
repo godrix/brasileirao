@@ -1,4 +1,4 @@
-import { extractedData } from "../../services";
+import { extractedDataTable } from "../../services";
 
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
@@ -17,7 +17,7 @@ const mockFilePathCNNErrorExtractImage = resolve(__dirname, '__mocks__', 'mock-c
 describe('extractData', () => {
   it("Should return the data extracted from GE's provider file", async () => {
     const mockData = readFileSync(mockFilePathGE, 'utf8');
-    const table = extractedData(mockData, 'GE');
+    const table = extractedDataTable(mockData, 'GE');
 
     expect(table[4].popularName).toBe('Vasco');
   });
@@ -25,12 +25,12 @@ describe('extractData', () => {
   it("Should throw an error if the table couldn't be found", async () => {
     const mockData = '';
 
-    expect(() => extractedData(mockData, 'CNN')).toThrowError('Não foi possível encontrar a tabela'); 
+    expect(() => extractedDataTable(mockData, 'CNN')).toThrowError('Não foi possível encontrar a tabela'); 
   });
 
   it("Should return the data extracted from CNN's provider file", async () => {
     const mockData = readFileSync(mockFilePathCNN, 'utf8');
-    const table = extractedData(mockData, 'CNN');
+    const table = extractedDataTable(mockData, 'CNN');
 
     expect(table[4].popularName).toBe('Vasco');
   }); 
@@ -38,31 +38,31 @@ describe('extractData', () => {
   it("Should throw an error if score information is not found", async () => {
     const mockData = readFileSync(mockFilePathCNNError, 'utf8');
 
-    expect(() => extractedData(mockData, 'CNN')).toThrowError('Não foi possível encontrar os de pontuação');
+    expect(() => extractedDataTable(mockData, 'CNN')).toThrowError('Não foi possível encontrar os de pontuação');
   });
 
   it("Should throw an error if it can't find the images", async () => {
     const mockData = readFileSync(mockFilePathCNNErrorExtractImage, 'utf8');
 
-    expect(() => extractedData(mockData, 'CNN')).toThrowError('Não foi possível extrair a imagem e o nome'); 
+    expect(() => extractedDataTable(mockData, 'CNN')).toThrowError('Não foi possível extrair a imagem e o nome'); 
   });
 
   it("Should throw an error if it can't extract the images", async () => {
     const mockData = readFileSync(mockFilePathCNNErrorImage, 'utf8');
 
-    expect(() => extractedData(mockData, 'CNN')).toThrowError('Não foi possível encontrar a imagem'); 
+    expect(() => extractedDataTable(mockData, 'CNN')).toThrowError('Não foi possível encontrar a imagem'); 
   });
 
    it("Should throw an error if it can't extract the acronym", async () => {
     const mockData = readFileSync(mockFilePathCNNErrorAcronym, 'utf8');
 
-    expect(() => extractedData(mockData, 'CNN')).toThrowError('Não foi possível encontrar a sigla');
+    expect(() => extractedDataTable(mockData, 'CNN')).toThrowError('Não foi possível encontrar a sigla');
   });
 
   it("Should throw an error if it can't find the values to extract", async () => {
     const mockData = 'lorem ipsum';
 
-    expect(() => extractedData(mockData, 'GE')).toThrowError('Não foi possível encontrar a tabela EXDD');
+    expect(() => extractedDataTable(mockData, 'GE')).toThrowError('Não foi possível encontrar a tabela EXDD');
   });
 
 });

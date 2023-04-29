@@ -1,1 +1,2 @@
-export * from './extractedData';
+export * from './extractedDataTable';
+export * from './extractedDataRoundMatches';

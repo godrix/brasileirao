@@ -1,4 +1,4 @@
 
-import { table } from './resolvers'
+import { table, match } from './resolvers'
 
-export { table }
+export { table, match }

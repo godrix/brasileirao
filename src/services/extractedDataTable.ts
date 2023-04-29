@@ -1,6 +1,6 @@
 import { ProvidersSupported, TabelaGE, TableData } from '../data/models'
 import { calculateGoalDifference, calculateWinPercentage } from '../utils'
-export const extractedData = (data: any, provider: ProvidersSupported):TableData[]  => {
+export const extractedDataTable = (data: any, provider: ProvidersSupported):TableData[]  => {
   if (provider === 'GE') {
     const regex = /const\s+classificacao\s+=\s+({.*?});/
     const match = regex.exec(data)
